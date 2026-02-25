@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Meta básicas -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO -->
+  <title>Calculadora Online Simples | Mobile First</title>
+  <meta name="description" content="Calculadora online simples, acessível e responsiva desenvolvida com HTML5 semântico, CSS BEM e JavaScript moderno." />
+  <meta name="author" content="Seu Nome" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Calculadora Online Simples" />
+  <meta property="og:description" content="Calculadora responsiva com boas práticas de acessibilidade e performance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__title">Calculadora</h1>
+  </header>
+
+  <main class="main">
+    <section class="calculator" aria-labelledby="calculator-title">
+      <h2 id="calculator-title" class="visually-hidden">
+        Calculadora aritmética básica
+      </h2>
+
+      <!-- Display -->
+      <div class="calculator__display" role="region" aria-live="polite">
+        <input
+          type="text"
+          class="calculator__input"
+          id="display"
+          aria-label="Visor da calculadora"
+          readonly
+        />
+      </div>
+
+      <!-- Teclado -->
+      <div class="calculator__keys" role="group" aria-label="Teclas da calculadora">
+        <button class="calculator__button calculator__button--operator" data-action="clear">C</button>
+        <button class="calculator__button calculator__button--operator" data-action="delete">←</button>
+        <button class="calculator__button calculator__button--operator" data-value="/">÷</button>
+        <button class="calculator__button calculator__button--operator" data-value="*">×</button>
+
+        <button class="calculator__button" data-value="7">7</button>
+        <button class="calculator__button" data-value="8">8</button>
+        <button class="calculator__button" data-value="9">9</button>
+        <button class="calculator__button calculator__button--operator" data-value="-">−</button>
+
+        <button class="calculator__button" data-value="4">4</button>
+        <button class="calculator__button" data-value="5">5</button>
+        <button class="calculator__button" data-value="6">6</button>
+        <button class="calculator__button calculator__button--operator" data-value="+">+</button>
+
+        <button class="calculator__button" data-value="1">1</button>
+        <button class="calculator__button" data-value="2">2</button>
+        <button class="calculator__button" data-value="3">3</button>
+        <button class="calculator__button calculator__button--equal" data-action="calculate">=</button>
+
+        <button class="calculator__button calculator__button--zero" data-value="0">0</button>
+        <button class="calculator__button" data-value=".">.</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">
+      © 2026 - Projeto Calculadora Mobile First
+    </p>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
